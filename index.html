@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CS Analytics — Démo interactive</title>
-<meta name="description" content="Démonstration interactive d'une application desktop d'analytics & d'automatisation (données 100% fictives).">
+<meta name="description" content="Démonstration interactive d'une application desktop d'analytics et d'automatisation (données 100 % fictives).">
 <style>
   :root{
     --bg-app:#0F1322; --bg-sidebar:#151C2C; --bg-card:rgba(28,38,62,.55);
@@ -30,7 +30,7 @@
   ::-webkit-scrollbar{width:9px;height:9px}
   ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:10px}
 
-  /* Démo banner */
+  /* Demo banner */
   .demo-strip{position:sticky;top:0;z-index:50;display:flex;gap:10px;align-items:center;justify-content:center;
     padding:7px 14px;font-size:12.5px;font-weight:600;color:#04121f;
     background:linear-gradient(90deg,#00F5D4,#34c3ff);letter-spacing:.2px}
@@ -158,7 +158,7 @@
   .radio{display:flex;align-items:center;gap:7px;color:var(--text);font-size:13px;cursor:pointer}
   .radio input{accent-color:var(--accent-cyan);width:15px;height:15px}
 
-  /* Banner preview (thème clair, comme le vrai bandeau) */
+  /* Banner preview */
   .bn-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
   .bn-toolbar .lbl{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);font-weight:700}
   .bn-toggle{display:inline-flex;background:var(--bg-input);border-radius:100px;padding:2px;gap:2px}
@@ -196,7 +196,7 @@
   .stat .n{font-size:26px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .stat .t{font-size:11.5px;color:var(--text2);margin-top:4px}
 
-  /* Présentation (diaporama) */
+  /* Presentation (Slideshow) */
   .stage{min-height:min(58vh,520px);background:linear-gradient(135deg,#0c1020,#141d33);border:var(--border);
     border-radius:var(--r-xl);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;
     padding:clamp(22px,4vw,48px)}
@@ -241,7 +241,7 @@
 </style>
 </head>
 <body>
-<div class="demo-strip">🔒 Démonstration — <span>données 100% fictives, aucune donnée réelle</span></div>
+<div class="demo-strip">🔒 Démo — <span>Données 100 % fictives, aucune donnée réelle ou secrète incluse</span></div>
 
 <button class="burger" id="burger" aria-label="Menu">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -252,9 +252,9 @@
   <aside class="sidebar" id="sidebar">
     <div class="brand">
       <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
-      <div><b>CS Analytics</b><small>Customer Success · démo</small></div>
+      <div><b>CS Analytics</b><small>Customer Success · Démo</small></div>
     </div>
-    <div class="nav-label">Pilotage</div>
+    <div class="nav-label">Suivi</div>
     <button class="nav-item active" data-view="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Vue d'ensemble</button>
     <button class="nav-item" data-view="analytics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg> Analytics</button>
     <button class="nav-item" data-view="crm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg> Clients &amp; CRM</button>
@@ -262,9 +262,9 @@
     <div class="nav-label">Automatisation</div>
     <button class="nav-item" data-view="console"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Console API</button>
     <div class="nav-label">Ingénierie</div>
-    <button class="nav-item" data-view="archi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Architecture &amp; sécurité</button>
+    <button class="nav-item" data-view="archi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Architecture &amp; Sécurité</button>
     <div class="sidebar-foot">
-      Démo statique, hors-ligne.<br>Reconstruite à partir d'une app desktop réelle (PyWebView + Python).
+      Démo statique, hors-ligne.<br>Calcul 100 % local — aucun transfert cloud pour conformité cybersécurité.
     </div>
   </aside>
 
@@ -272,25 +272,26 @@
     <!-- ════ OVERVIEW ════ -->
     <section class="view active" id="view-overview">
       <div class="hero">
-        <h1>Une suite <span class="g">analytics &amp; automatisation</span><br>pour les équipes Customer Success</h1>
-        <p>Application desktop qui transforme des exports bruts (Excel/CSV) en rapports PowerPoint clés en main, pilote un portefeuille client, et automatise des appels d'API d'infrastructure — le tout dans une interface unifiée, hors-ligne, sans serveur.</p>
+        <h1>Une suite d'<span class="g">analytics &amp; d'automatisation</span><br>pour les équipes Customer Success</h1>
+        <p>Une application desktop qui transforme des exports bruts (Excel/CSV) en rapports PowerPoint clés en main, gère un portefeuille clients et automatise les appels API d'infrastructure — le tout dans une interface unifiée, hors-ligne et sans serveur.</p>
         <div class="tags">
           <span class="tag">Backend <b>Python</b></span>
-          <span class="tag">GUI <b>PyWebView</b></span>
-          <span class="tag">Data <b>pandas</b></span>
-          <span class="tag"><b>python-pptx</b></span>
+          <span class="tag">Interface <b>PyWebView</b></span>
+          <span class="tag">Données <b>pandas</b></span>
+          <span class="tag">Rapports <b>python-pptx</b></span>
           <span class="tag">Front <b>HTML/JS</b></span>
+          <span class="tag" style="border-color:var(--accent-cyan);box-shadow:var(--glow)">🔒 <b>100 % Hors-ligne</b></span>
           <span class="tag"><b>145</b> tests</span>
         </div>
       </div>
 
-      <div class="page-head"><h1 style="font-size:19px">Ce que fait l'application</h1><p>Cliquez sur les sections interactives dans le menu (Analytics, Console API…).</p></div>
+      <div class="page-head"><h1 style="font-size:19px">Fonctionnalités de l'application</h1><p>Cliquez sur les sections interactives du menu (Analytics, Console API...).</p></div>
       <div class="bento" id="bento"></div>
     </section>
 
     <!-- ════ ANALYTICS ════ -->
     <section class="view" id="view-analytics">
-      <div class="page-head"><h1>Analytics</h1><p>Tableau de bord interactif par client et par produit — KPIs, évolution, taux de consommation.</p></div>
+      <div class="page-head"><h1>Analytics</h1><p>Tableau de bord interactif par client et par produit — KPIs, tendances, taux de consommation.</p></div>
       <div class="controls">
         <div class="field"><label>Client</label><select id="an-client"></select></div>
         <div class="field"><label>Produit</label>
@@ -311,7 +312,7 @@
       </div>
       <div class="kpis" id="an-kpis"></div>
       <div class="card" style="margin-bottom:16px">
-        <h2><span class="dot"></span> Commandes vs consommation</h2>
+        <h2><span class="dot"></span> Contrat vs utilisation</h2>
         <p class="muted" style="margin-bottom:16px">Taux d'utilisation des capacités contractuelles.</p>
         <div class="gauges" id="an-gauges"></div>
       </div>
@@ -329,31 +330,31 @@
 
     <!-- ════ CRM ════ -->
     <section class="view" id="view-crm">
-      <div class="page-head"><h1>Clients &amp; CRM</h1><p>Portefeuille personnel et base de fiches partagée — deux périmètres volontairement découplés.</p></div>
+      <div class="page-head"><h1>Clients &amp; CRM</h1><p>Portefeuille personnel et base CRM partagée — deux scopes volontairement découplés.</p></div>
       <div class="two-col" style="grid-template-columns:1fr 1fr;margin-bottom:16px">
         <div class="card">
-          <h2><span class="dot"></span> ⭐ Mon portefeuille <span class="pill local" style="margin-left:auto">local · privé</span></h2>
-          <p class="muted" style="margin:6px 0 14px">Les clients que <b>je</b> suis. Strictement local à ma machine — jamais partagé.</p>
+          <h2><span class="dot"></span> ⭐ Mon Portefeuille <span class="pill local" style="margin-left:auto">local · privé</span></h2>
+          <p class="muted" style="margin:6px 0 14px">Clients que <b>je</b> suis. Strictement local à ma machine — jamais partagé.</p>
           <div id="crm-portfolio"></div>
         </div>
         <div class="card">
           <h2><span class="dot"></span> 🤝 Fiches clients (CRM) <span class="pill shared" style="margin-left:auto">partagé · équipe</span></h2>
-          <p class="muted" style="margin:6px 0 14px">Contacts, licences, suivi — partagés et <b>fusionnés</b> entre collègues (le plus récent gagne, jamais d'écrasement).</p>
+          <p class="muted" style="margin:6px 0 14px">Contacts, licences, suivi — partagé et **fusionné** entre collègues (la version la plus récente l'emporte).</p>
           <div style="overflow-x:auto"><table id="crm-table"></table></div>
         </div>
       </div>
       <div class="card">
         <h2><span class="dot"></span> Pourquoi ce découplage ?</h2>
-        <p class="muted" style="margin-top:8px">Au départ un seul fichier servait aux deux usages → les collègues s'écrasaient mutuellement leurs données. La séparation <b>favoris (local)</b> / <b>fiches CRM (partagées)</b> a supprimé les conflits : chacun garde son portefeuille privé tout en partageant une base de fiches commune, synchronisée par fusion temporelle. Couvert par des tests de non-régression.</p>
+        <p class="muted" style="margin-top:8px">À l'origine, un seul fichier gérait ces deux aspects → les collègues écrasaient mutuellement leurs favoris. Le découplage en **favoris (local)** et **fiches CRM (partagé)** a éliminé les conflits : chacun garde son portefeuille privé tout en partageant une base commune de fiches synchronisées par fusion de timestamps. Entièrement couvert par tests de non-régression.</p>
       </div>
     </section>
 
     <!-- ════ CONSOLE ════ -->
     <section class="view" id="view-console">
-      <div class="page-head"><h1>Console API (style Postman)</h1><p>Composez une requête, prévisualisez le rendu, et envoyez-la à un lot d'infrastructures en une fois. <b>Tout est simulé</b> ici.</p></div>
+      <div class="page-head"><h1>Console API (Style Postman)</h1><p>Composez une requête, prévisualisez le rendu et envoyez-la à tout un lot d'infrastructures en parallèle. **Tout est simulé** ici.</p></div>
       <div class="card">
         <div class="console-row">
-          <div class="field" style="flex:1;min-width:220px"><label>Lot d'infras (multi-cibles)</label>
+          <div class="field" style="flex:1;min-width:220px"><label>Lot d'Infrastructures (multi-cibles)</label>
             <select id="co-lot"></select>
           </div>
           <div class="field method"><label>Méthode</label>
@@ -375,7 +376,7 @@
             <label class="radio"><input type="radio" name="auth" checked> Certificat client .p12 (mTLS)</label>
             <label class="radio"><input type="radio" name="auth"> Bearer Token</label>
           </div>
-          <p class="muted">🔐 Dans l'app réelle : le mot de passe du .p12 et le token ne sont <b>jamais</b> stockés ni écrits dans l'historique ; les fichiers PEM temporaires sont supprimés systématiquement après l'appel.</p>
+          <p class="muted">🔐 Dans l'application réelle : le mot de passe du certificat .p12 et le jeton ne sont **jamais** persistés ni écrits dans l'historique ; les clés PEM temporaires sont systématiquement supprimées après l'appel.</p>
         </div>
         <div class="tabpane" id="tab-body">
           <textarea id="co-body" rows="12" spellcheck="false"></textarea>
@@ -404,14 +405,14 @@
 
     <!-- ════ PRÉSENTATION ════ -->
     <section class="view" id="view-presentation">
-      <div class="page-head"><h1>Présentation</h1><p>Mode diaporama pour présenter les bilans en clientèle — pensé pour le double écran, l'édition en direct et l'annotation.</p></div>
+      <div class="page-head"><h1>Présentation</h1><p>Mode diaporama pour les revues clients — conçu pour le double écran, l'édition en direct et le dessin.</p></div>
       <div class="stage"><div class="slide on" id="pres-stage"></div></div>
       <div class="pres-bar">
         <div class="pres-feats">
           <span class="tag">🖥️ <b>Double écran</b></span>
           <span class="tag">✏️ <b>Édition live</b></span>
           <span class="tag">🖊️ <b>Mode dessin</b></span>
-          <span class="tag">➕ <b>Slides manuels</b></span>
+          <span class="tag">➕ <b>Slides manuelles</b></span>
         </div>
         <div class="pres-nav">
           <button class="btn ghost" id="pres-prev">‹ Précédent</button>
@@ -424,47 +425,100 @@
 
     <!-- ════ ARCHI ════ -->
     <section class="view" id="view-archi">
-      <div class="page-head"><h1>Architecture &amp; sécurité</h1><p>Les choix d'ingénierie derrière l'application.</p></div>
+      <div class="page-head"><h1>Architecture &amp; Sécurité</h1><p>Les choix d'ingénierie derrière l'application.</p></div>
 
       <div class="stat-row" style="margin-bottom:20px">
-        <div class="stat"><div class="n">~6 400</div><div class="t">lignes Python</div></div>
+        <div class="stat"><div class="n">~6 400</div><div class="t">lignes de Python</div></div>
         <div class="stat"><div class="n">145</div><div class="t">tests (pytest)</div></div>
-        <div class="stat"><div class="n">2</div><div class="t">moteurs produit</div></div>
+        <div class="stat"><div class="n">2</div><div class="t">moteurs produits</div></div>
         <div class="stat"><div class="n">0</div><div class="t">serveur requis</div></div>
       </div>
 
       <div class="card" style="margin-bottom:16px">
         <h2><span class="dot"></span> Le pont front ⇄ back</h2>
-        <p class="muted" style="margin:8px 0 16px">Pas de serveur web : une fenêtre native (WebView2) affiche du HTML/JS qui dialogue avec Python via un pont d'API exposé. Les moteurs de génération historiques restent des « boîtes noires » appelées en sous-processus, jamais modifiées.</p>
+        <p class="muted" style="margin:8px 0 16px">Aucun serveur web : une fenêtre native (WebView2) affiche le HTML/JS communiquant avec Python via un pont API exposé. Les moteurs historiques de génération restent des « boîtes noires » exécutées en sous-processus sans modification.</p>
         <div class="archi">
           <div class="layer"><b>🖥️ Frontend</b> — HTML / CSS / JS<div class="mods"><span class="chip">Vue d'ensemble</span><span class="chip">Analytics</span><span class="chip">CRM</span><span class="chip">Console API</span><span class="chip">Calendrier</span></div></div>
-          <div class="arrow">▲ ▼ &nbsp; pont <code>js_api</code> (PyWebView)</div>
-          <div class="layer"><b>⚙️ Backend</b> — orchestration &amp; API<div class="mods"><span class="chip">main.py · classe Api</span><span class="chip">config_helper</span><span class="chip">infra_scripts</span><span class="chip">calendrier_helper</span></div></div>
+          <div class="arrow">▲ ▼ &nbsp; Pont <code>js_api</code> (PyWebView)</div>
+          <div class="layer"><b>⚙️ Backend</b> — Orchestration &amp; API<div class="mods"><span class="chip">main.py · Classe Api</span><span class="chip">config_helper</span><span class="chip">infra_scripts</span><span class="chip">calendrier_helper</span></div></div>
           <div class="arrow">▲ ▼</div>
-          <div class="layer"><b>📊 Moteurs</b> — calcul &amp; rendu<div class="mods"><span class="chip">adapters analytics</span><span class="chip">python-pptx</span><span class="chip">subprocess (boîtes noires)</span></div></div>
+          <div class="layer"><b>📊 Moteurs</b> — Calcul &amp; Rendu<div class="mods"><span class="chip">adaptateurs analytics</span><span class="chip">python-pptx</span><span class="chip">sous-processus (boîtes noires)</span></div></div>
         </div>
       </div>
 
       <div class="two-col" style="grid-template-columns:1fr 1fr">
         <div class="card">
-          <h2><span class="dot"></span> Choix de sécurité</h2>
+          <h2><span class="dot"></span> Choix de Sécurité &amp; mTLS</h2>
           <ul class="sec-list" style="margin-top:14px">
-            <li><span class="ok">✓</span><span><b>Secrets éphémères</b> — mots de passe .p12 et tokens jamais persistés ni journalisés.</span></li>
-            <li><span class="ok">✓</span><span><b>mTLS maîtrisé</b> — PEM temporaires extraits en mémoire puis supprimés dans un <code>finally</code> imperméable.</span></li>
-            <li><span class="ok">✓</span><span><b>Sous-processus sûrs</b> — <code>shell=False</code>, arguments validés (nom client, dates) avant exécution.</span></li>
-            <li><span class="ok">✓</span><span><b>Calcul de KPI bridé</b> — expressions sur liste blanche stricte, sans accès aux fonctions système.</span></li>
-            <li><span class="ok">✓</span><span><b>HTTPS imposé</b> sur les appels d'infrastructure.</span></li>
+            <li><span class="ok">✓</span><span><b>Calculs locaux (On-Premise)</b> — Tout le traitement de données, le parsing de logs et le rendu PPTX sont effectués localement. <b>Aucune donnée n'est jamais envoyée vers le cloud</b>, garantissant la conformité stricte avec les directives de cybersécurité.</span></li>
+            <li><span class="ok">✓</span><span><b>Secrets éphémères</b> — Les mots de passe .p12 et tokens API ne sont jamais stockés ni loggués.</span></li>
+            <li><span class="ok">✓</span><span><b>mTLS sécurisé</b> — Fichiers PEM temporaires extraits uniquement en mémoire puis supprimés dans un bloc <code>finally</code> strict.</span></li>
+            <li><span class="ok">✓</span><span><b>Sous-processus sécurisés</b> — <code>shell=False</code>, arguments validés (noms de clients, dates) avant exécution.</span></li>
+            <li><span class="ok">✓</span><span><b>Calculs de KPI encadrés</b> — Formules basées sur une liste blanche stricte de jetons, sans accès aux fonctions système.</span></li>
+            <li><span class="ok">✓</span><span><b>HTTPS obligatoire</b> sur tous les appels d'infrastructure.</span></li>
           </ul>
         </div>
         <div class="card">
-          <h2><span class="dot"></span> Fiabilité des données</h2>
+          <h2><span class="dot"></span> Fiabilité des Données</h2>
           <ul class="sec-list" style="margin-top:14px">
-            <li><span class="ok">✓</span><span><b>Sauvegarde miroir</b> automatique de chaque réglage dans le profil utilisateur (anti-perte).</span></li>
-            <li><span class="ok">✓</span><span><b>Restauration intelligente</b> — un fichier vide ne peut jamais écraser un fichier contenant des données.</span></li>
-            <li><span class="ok">✓</span><span><b>Fusion concurrente</b> — les fiches partagées sont fusionnées par horodatage (le plus récent gagne).</span></li>
-            <li><span class="ok">✓</span><span><b>Découplage local / partagé</b> — le portefeuille privé n'est jamais propagé sur le réseau.</span></li>
-            <li><span class="ok">✓</span><span><b>Résilience PPTX</b> — gestion des fichiers verrouillés avec repli automatique.</span></li>
+            <li><span class="ok">✓</span><span><b>Sauvegarde miroir</b> — Copie de sauvegarde automatique de chaque configuration dans le profil utilisateur (anti-perte).</span></li>
+            <li><span class="ok">✓</span><span><b>Restauration intelligente</b> — Un fichier vide ne peut jamais écraser un fichier contenant des données.</span></li>
+            <li><span class="ok">✓</span><span><b>Concurrent Merge</b> — Fusion des fiches partagées par timestamp (la modification la plus récente l'emporte).</span></li>
+            <li><span class="ok">✓</span><span><b>Découplage local/partagé</b> — Le portefeuille privé n'est jamais propagé sur le réseau.</span></li>
+            <li><span class="ok">✓</span><span><b>Résilience PPTX</b> — Interception des fichiers verrouillés par PowerPoint avec fallbacks automatiques de sauvegarde.</span></li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Visualiseur de flux de données sécurisé (Zéro Cloud) -->
+      <div class="card" style="margin-top:16px">
+        <h2><span class="dot"></span> Visualiseur de flux &amp; Confidentialité</h2>
+        <p class="muted" style="margin-bottom:20px">Schéma interactif démontrant le traitement 100 % hors-ligne de vos données d'activité.</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--bg-input);padding:24px;border-radius:var(--r-lg);border:var(--border);position:relative;overflow:hidden;flex-wrap:wrap">
+          <!-- Node 1: Raw Data -->
+          <div style="text-align:center;flex:1;min-width:110px">
+            <div style="width:48px;height:48px;border-radius:12px;background:rgba(0,119,255,.1);display:grid;place-items:center;margin:0 auto 8px;border:1px solid var(--accent-blue)">
+              📊
+            </div>
+            <b style="font-size:12px">Logs clients bruts</b>
+            <div class="muted" style="font-size:10.5px;margin-top:2px">Exports Excel / CSV</div>
+          </div>
+
+          <!-- Arrow 1 -->
+          <div style="flex:0.5;text-align:center;min-width:40px;color:var(--accent-blue);font-weight:bold;animation: pulse 1.5s infinite">
+            ──►
+          </div>
+
+          <!-- Node 2: Local Process -->
+          <div style="text-align:center;flex:1;min-width:130px;position:relative">
+            <div style="width:54px;height:54px;border-radius:14px;background:rgba(0,245,212,.1);display:grid;place-items:center;margin:0 auto 8px;border:2px solid var(--accent-cyan);box-shadow:var(--glow)">
+              ⚙️
+            </div>
+            <b style="font-size:12.5px;color:var(--accent-cyan)">Moteur local Python</b>
+            <div class="muted" style="font-size:10.5px;margin-top:2px">Pandas &amp; python-pptx</div>
+          </div>
+
+          <!-- Arrow 2 -->
+          <div style="flex:0.5;text-align:center;min-width:40px;color:var(--accent-cyan);font-weight:bold;animation: pulse 1.5s infinite">
+            ──►
+          </div>
+
+          <!-- Node 3: Output PPTX -->
+          <div style="text-align:center;flex:1;min-width:110px">
+            <div style="width:48px;height:48px;border-radius:12px;background:rgba(143,0,255,.1);display:grid;place-items:center;margin:0 auto 8px;border:1px solid var(--accent-violet)">
+              📈
+            </div>
+            <b style="font-size:12px">Rapport local</b>
+            <div class="muted" style="font-size:10.5px;margin-top:2px">PPTX prêt à l'emploi</div>
+          </div>
+
+          <!-- Blocked Cloud Node -->
+          <div style="width:100%;border-top:1px dashed rgba(255,255,255,.1);margin-top:16px;padding-top:16px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+            <div style="color:#FF6B6B;font-size:16px;display:flex;align-items:center;gap:6px">
+              🚫 <span style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px">Serveurs Cloud Publics (Bloqués)</span>
+            </div>
+            <div class="muted" style="font-size:11px">— Isolation réseau complète. Zéro fuite vers le cloud.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -550,7 +604,7 @@ function gauge(pct, color, label, raw){
   </div>`;
 }
 
-/* ════════════════ NAV ════════════════ */
+/* ════════════════ NAVIGATION ════════════════ */
 const sidebar=document.getElementById('sidebar'), scrim=document.getElementById('scrim');
 function closeMenu(){sidebar.classList.remove('open');scrim.classList.remove('show');}
 document.getElementById('burger').onclick=()=>{sidebar.classList.toggle('open');scrim.classList.toggle('show');};
@@ -569,15 +623,15 @@ document.querySelectorAll('.nav-item').forEach(b=>b.onclick=()=>{
 
 /* ════════════════ OVERVIEW (bento) ════════════════ */
 const FEATURES=[
-  ["📊","Rapports PowerPoint","Génère des bilans PPTX complets (KPIs, graphes, jauges) à partir d'exports Excel/CSV, par client et par période, FR/EN."],
-  ["📈","Analytics interactif","Tableau de bord par client : évolution, pics, moyennes, taux de consommation contractuelle.","analytics"],
-  ["⭐","Portefeuille & CRM","Favoris privés + fiches clients partagées et fusionnées entre collègues, sans conflit.","crm"],
-  ["⚙️","Console API infra","Composer/prévisualiser/envoyer des requêtes mTLS à des lots d'infrastructures.","console"],
-  ["🎥","Présentation client","Diaporama plein écran (double écran, édition live, annotations) pour présenter les bilans.","presentation"],
-  ["🗓️","Calendrier CSM","Suivi des déploiements, visites et incidents, avec export/import .ics."],
-  ["🧮","Calculateur de KPI","Indicateurs personnalisés via des formules sûres, réutilisables dans les rapports."],
-  ["🧩","Consolidation","Fusion de plusieurs exports Excel/CSV en un fichier unique dédoublonné."],
-  ["🏛️","Architecture robuste","Pont natif PyWebView, sauvegardes miroir, 145 tests automatisés.","archi"],
+  ["📊","Rapports PowerPoint","Génère des diaporamas PPTX complets (KPIs, graphiques, jauges) à partir d'exports Excel/CSV, par client et période, en FR/EN."],
+  ["📈","Analytics Interactifs","Tableau de bord par client : tendances, pics, moyennes et taux d'utilisation des contrats.","analytics"],
+  ["⭐","Portefeuille & CRM","Favoris privés + fiches clients partagées fusionnés dynamiquement entre collègues, sans conflit.","crm"],
+  ["⚙️","Console API Infrastructure","Composez, prévisualisez et envoyez des requêtes mTLS vers vos cibles d'infrastructure.","console"],
+  ["🎥","Présentation Client","Diaporama plein écran (avec support double écran, édition live et mode dessin) pour les revues clients.","presentation"],
+  ["🗓️","CSM Calendar","Suivi des déploiements, visites et incidents avec import/export .ics."],
+  ["🧮","Calculateur de KPI","Indicateurs sur-mesure calculés via des formules Pandas sécurisées, réutilisables dans les rapports."],
+  ["🧩","Consolidation de Données","Fusionnez plusieurs exports Excel/CSV en un seul fichier dédoublonné."],
+  ["🛡️","Sécurité & On-Premise","Calcul 100 % hors-ligne. Tous les calculs, parsing de logs et rendus PPTX sont locaux pour conformité cybersécurité.","archi"],
 ];
 document.getElementById('bento').innerHTML=FEATURES.map(f=>`
   <div class="feat" ${f[3]?`data-go="${f[3]}" style="cursor:pointer"`:''}>
@@ -604,11 +658,11 @@ function renderAnalytics(){
   let kpis, gauges, c1, c2;
   if(anProd==="securedrive"){
     kpis=[
-      ["Max utilisateurs",max(s.utilisateurs),growth(s.utilisateurs)],
-      ["Max invités",max(s.invites),growth(s.invites)],
+      ["Utilisateurs Max",max(s.utilisateurs),growth(s.utilisateurs)],
+      ["Invités Max",max(s.invites),growth(s.invites)],
       ["Stockage (Go)",s.stockage[s.stockage.length-1],growth(s.stockage)],
-      ["Workspaces actifs",s.workspace[s.workspace.length-1],growth(s.workspace)],
-      ["Total partages",sum(s.sharing),null],
+      ["Workspaces Actifs",s.workspace[s.workspace.length-1],growth(s.workspace)],
+      ["Total Partages",sum(s.sharing),null],
     ];
     gauges=[
       gauge(72, C1, "Utilisateurs", `${fmt(max(s.utilisateurs))} / ${fmt(Math.round(max(s.utilisateurs)*1.38))}`),
@@ -621,18 +675,18 @@ function renderAnalytics(){
     const e2e=Math.round(sum(s.messages_e2e)/Math.max(1,sum(s.messages))*100);
     const se2e=Math.round(sum(s.salons_chiff)/Math.max(1,sum(s.salons))*100);
     kpis=[
-      ["Pic utilisateurs",max(s.utilisateurs),growth(s.utilisateurs)],
-      ["Total messages",sum(s.messages),growth(s.messages)],
-      ["Pic messages",max(s.messages),null],
-      ["Taux E2E",e2e+" %",null],
-      ["Salons chiffrés",sum(s.salons_chiff),growth(s.salons_chiff)],
+      ["Pic Utilisateurs",max(s.utilisateurs),growth(s.utilisateurs)],
+      ["Total Messages",sum(s.messages),growth(s.messages)],
+      ["Pic Messages",max(s.messages),null],
+      ["Taux Chiffrement",e2e+" %",null],
+      ["Salons Chiffrés",sum(s.salons_chiff),growth(s.salons_chiff)],
     ];
     gauges=[
-      gauge(e2e, C1, "Messages E2E", `${fmt(sum(s.messages_e2e))} / ${fmt(sum(s.messages))}`),
-      gauge(se2e, CV, "Salons chiffrés", `${fmt(sum(s.salons_chiff))} / ${fmt(sum(s.salons))}`),
+      gauge(e2e, C1, "Messages Chiffrés", `${fmt(sum(s.messages_e2e))} / ${fmt(sum(s.messages))}`),
+      gauge(se2e, CV, "Salons Chiffrés", `${fmt(sum(s.salons_chiff))} / ${fmt(sum(s.salons))}`),
       gauge(68, "#7A90B0", "Adoption", `${fmt(max(s.utilisateurs))} actifs`),
     ];
-    c1={title:"Messages (total vs chiffrés)",series:[{name:"Total",color:CB,data:s.messages},{name:"E2E chiffrés",color:C1,data:s.messages_e2e}]};
+    c1={title:"Messages (Total vs Chiffrés)",series:[{name:"Total",color:CB,data:s.messages},{name:"Chiffrés de bout en bout",color:C1,data:s.messages_e2e}]};
     c2={title:"Salons & conférences",series:[{name:"Salons créés",color:CB,data:s.salons},{name:"Conférences",color:CO,data:s.conferences}]};
   }
   document.getElementById('an-kpis').innerHTML=kpis.map(k=>`<div class="kpi"><div class="v">${typeof k[1]==='number'?fmt(k[1]):k[1]}</div><div class="l">${k[0]}</div>${gTag(k[2])}</div>`).join("");
@@ -645,9 +699,9 @@ function renderAnalytics(){
   document.getElementById('an-chart2-leg').innerHTML=legend(c2.series);
 }
 document.getElementById('an-gen').onclick=function(){
-  const b=this;b.disabled=true;b.textContent="Génération…";
+  const b=this;b.disabled=true;b.textContent="Generating…";
   setTimeout(()=>{b.disabled=false;b.innerHTML=`<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> Générer le rapport (PPTX)`;
-    toast("Rapport généré (démo)", `Analytics_${PRODUITS[anProd]}_${selClient.value}.pptx`);},1400);
+    toast("Report generated (demo)", `Analytics_${PRODUITS[anProd]}_${selClient.value}.pptx`);},1400);
 };
 
 /* ════════════════ CRM ════════════════ */
@@ -661,19 +715,19 @@ document.getElementById('crm-portfolio').innerHTML=portfolio.map(o=>{
     <div style="width:120px;opacity:.9">${spark}</div></div>`;
 }).join("");
 document.getElementById('crm-table').innerHTML=`
-  <thead><tr><th>Client</th><th>Contact clé</th><th>Licences</th><th>Maj</th></tr></thead>
+  <thead><tr><th>Client</th><th>Contact Clé</th><th>Licences</th><th>Mis à jour</th></tr></thead>
   <tbody>${CLIENTS.slice(0,6).map((c,i)=>{
     const rnd=mulberry32(hashStr(c));
     const lic=[25,50,100,250,500,1200][Math.floor(rnd()*6)];
     const days=Math.floor(rnd()*20);
-    return `<tr><td><b>${c}</b></td><td>${CONTACTS[i]}</td><td>${fmt(lic)}</td><td class="muted">il y a ${days} j</td></tr>`;
+    return `<tr><td><b>${c}</b></td><td>${CONTACTS[i]}</td><td>${fmt(lic)}</td><td class="muted">${days}j</td></tr>`;
   }).join("")}</tbody>`;
 
 /* ════════════════ CONSOLE API ════════════════ */
 const LOTS=[
-  {nom:"— Infra unique (par défaut) —", infras:["https://eu-west.demo-infra.local:8443"]},
+  {nom:"— Infra unique (défaut) —", infras:["https://eu-west.demo-infra.local:8443"]},
   {nom:"Europe (3 infras)", infras:["https://eu-west.demo-infra.local:8443","https://eu-north.demo-infra.local:8443","https://eu-south.demo-infra.local:8443"]},
-  {nom:"Amériques (2 infras)", infras:["https://us-east.demo-infra.local:8443","https://sa-east.demo-infra.local:8443"]},
+  {nom:"Amérique (2 infras)", infras:["https://us-east.demo-infra.local:8443","https://sa-east.demo-infra.local:8443"]},
 ];
 document.getElementById('co-lot').innerHTML=LOTS.map((l,i)=>`<option value="${i}">${l.nom}</option>`).join("");
 const DEFAULT_BODY={chunk:[{id:null,from_ts:1781589600,until_ts:1783836000,unhidable_ts:1781589600,
@@ -713,7 +767,7 @@ document.getElementById('co-send').onclick=async function(){
   const lot=LOTS[+document.getElementById('co-lot').value];
   const method=document.getElementById('co-method').value;
   const ep=document.getElementById('co-endpoint').value;
-  try{JSON.parse(coBody.value);}catch(e){return toast("JSON invalide","Corrigez le corps de la requête.",true);}
+  try{JSON.parse(coBody.value);}catch(e){return toast("JSON Invalide","Veuillez corriger le corps de la requête.",true);}
   const box=document.getElementById('co-results');box.innerHTML="";
   this.disabled=true;
   for(const infra of lot.infras){
@@ -723,7 +777,7 @@ document.getElementById('co-send').onclick=async function(){
     const id=Math.floor(10000+Math.random()*89999);
     const div=document.createElement('div');
     div.className="result "+(ok?"ok":"ko");
-    div.innerHTML=`<div><b>${infra.replace('https://','')}</b><div class="meta">${ok?'✅':'❌'} HTTP ${code} ${ok&&method==='POST'?'· id message #'+id:''}</div></div>
+    div.innerHTML=`<div><b>${infra.replace('https://','')}</b><div class="meta">${ok?'✅':'❌'} HTTP ${code} ${ok&&method==='POST'?'· message id #'+id:''}</div></div>
       <code style="font-size:11px;color:var(--text3)">${method}</code>`;
     box.appendChild(div);
   }
@@ -740,22 +794,22 @@ function buildPres(){
   const e2e=Math.round(sum(s.messages_e2e)/Math.max(1,sum(s.messages))*100);
   const se2e=Math.round(sum(s.salons_chiff)/Math.max(1,sum(s.salons))*100);
   presSlides=[
-    `<div class="cl">${PRES_CLIENT}</div><div class="sub">TeamChat — Bilan d'activité</div>
-     <div class="per">12 dernières semaines · ${s.labels[0]} → ${s.labels[s.labels.length-1]} · généré automatiquement</div>`,
-    `<h2><span class="dot"></span> Indicateurs clés — ${PRES_CLIENT}</h2>
+    `<div class="cl">${PRES_CLIENT}</div><div class="sub">TeamChat — Activity Review</div>
+     <div class="per">Last 12 weeks · ${s.labels[0]} → ${s.labels[s.labels.length-1]} · automatically generated</div>`,
+    `<h2><span class="dot"></span> Key Metrics — ${PRES_CLIENT}</h2>
      <div class="slide-kpis">
-       ${presKpi(fmt(max(s.utilisateurs)),"Pic utilisateurs")}
-       ${presKpi(fmt(sum(s.messages)),"Total messages")}
-       ${presKpi(e2e+" %","Taux messages E2E")}
-       ${presKpi(fmt(sum(s.salons)),"Salons créés")}
-       ${presKpi(se2e+" %","Salons chiffrés")}
-       ${presKpi(fmt(sum(s.conferences)),"Conférences")}
+       ${presKpi(fmt(max(s.utilisateurs)),"Peak Users")}
+       ${presKpi(fmt(sum(s.messages)),"Total Messages")}
+       ${presKpi(e2e+" %","E2E Message Rate")}
+       ${presKpi(fmt(sum(s.salons)),"Rooms Created")}
+       ${presKpi(se2e+" %","Encrypted Rooms")}
+       ${presKpi(fmt(sum(s.conferences)),"Conferences")}
      </div>`,
-    `<h2><span class="dot"></span> Évolution des messages</h2>
+    `<h2><span class="dot"></span> Messages Trend</h2>
      ${lineChart([{name:"Total",color:CB,data:s.messages},{name:"E2E",color:C1,data:s.messages_e2e}],250)}
-     <div class="legend">${legend([{name:"Total",color:CB},{name:"E2E chiffrés",color:C1}])}</div>`,
-    `<h2><span class="dot"></span> Adoption &amp; chiffrement</h2>
-     <div class="gauges">${gauge(e2e,C1,"Messages E2E","")}${gauge(se2e,CV,"Salons chiffrés","")}${gauge(68,"#7A90B0","Adoption",fmt(max(s.utilisateurs))+" actifs")}</div>`,
+     <div class="legend">${legend([{name:"Total",color:CB},{name:"E2E Encrypted",color:C1}])}</div>`,
+    `<h2><span class="dot"></span> Adoption &amp; Encryption</h2>
+     <div class="gauges">${gauge(e2e,C1,"E2E Messages","")}${gauge(se2e,CV,"Encrypted Rooms","")}${gauge(68,"#7A90B0","Adoption",fmt(max(s.utilisateurs))+" active")}</div>`,
   ];
 }
 function showPres(i){
