@@ -1,3 +1,5 @@
+`<a id="top"></a>`
+
 <p align="center">
   <img src="logo_clean.png" width="120" alt="CS Analytics" />
 </p>
