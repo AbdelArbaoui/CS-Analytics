@@ -24,13 +24,4 @@ Démonstration **interactive et hors-ligne** d'une application desktop d'**analy
 Python · PyWebView (WebView2) · pandas · python-pptx · HTML/CSS/JS vanilla · suite de tests pytest.
 *(La démo elle-même est un unique fichier HTML statique : la dataviz est dessinée en SVG maison, sans aucune librairie externe, pour fonctionner partout hors-ligne.)*
 
-## 🚀 Activer GitHub Pages (pour partager un lien + QR code)
-
-1. Pousse ce dossier dans un dépôt GitHub (le fichier doit s'appeler `index.html` à la racine).
-2. **Settings → Pages → Build and deployment → Source : `Deploy from a branch`**, branche `main`, dossier `/root`.
-3. Patiente ~1 min : GitHub publie une URL du type `https://<utilisateur>.github.io/<repo>/`.
-4. Génère un **QR code** de cette URL (n'importe quel générateur) → un recruteur scanne et la démo s'ouvre sur son téléphone (l'interface est responsive).
-
----
-
 <sub>Démo de présentation — données fictives — © sans données réelles.</sub>
