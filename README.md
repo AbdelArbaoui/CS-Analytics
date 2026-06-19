@@ -1,5 +1,3 @@
-`<a id="top"></a>`
-
 <p align="center">
   <img src="logo_clean.png" width="120" alt="CS Analytics" />
 </p>
@@ -33,17 +31,15 @@ Conçu pour des environnements d'entreprise hautement restreints :
 
 ## 📑 Sommaire
 
-- [✨ Fonctionnalités](#fonctionnalites)
-- [🗂️ Architecture des données](#architecture-des-donnees)
+- [✨ Fonctionnalités](#fonctionnalités)
+- [🗂️ Architecture des données](#architecture-des-données)
 - [🚀 Installation](#installation)
 - [🖥️ Utilisation](#utilisation)
 - [📂 Structure du projet](#structure-du-projet)
-- [🛠️ Développement](#developpement)
-- [🩹 Dépannage](#depannage)
+- [🛠️ Développement](#développement)
+- [🩹 Dépannage](#dépannage)
 
 ---
-
-`<a id="fonctionnalites"></a>`
 
 ## ✨ Fonctionnalités
 
@@ -71,9 +67,7 @@ La page **Automatisation** intègre une Console API complète permettant de pilo
 - **Affichage intelligent conditionnel** : Le sélecteur de tenants et les contrôles associés s'affichent uniquement pour les endpoints de type messages bandeaux (`/api/infra_messages`), épurant l'interface pour les autres endpoints.
 - **Gestion des requêtes** : Enregistrement rapide des templates de requêtes et renommage direct depuis l'interface (bouton ✏️).
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="architecture-des-donnees"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 🗂️ Architecture des données
 
@@ -89,9 +83,7 @@ Les fichiers de configuration et de données de l'application sont répartis sel
 
 Tous ces fichiers disposent d'une copie miroir dans `%APPDATA%\SuiteReports` en filet de sécurité. Logique réseau gérée dans `config_helper.get_shared_sync_dir()`.
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="installation"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 🚀 Installation
 
@@ -105,9 +97,7 @@ Tous ces fichiers disposent d'une copie miroir dans `%APPDATA%\SuiteReports` en 
 
 ✅ Une fois l'installation terminée, plus besoin de relancer l'installateur.
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="utilisation"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 🖥️ Utilisation
 
@@ -118,9 +108,7 @@ Tous ces fichiers disposent d'une copie miroir dans `%APPDATA%\SuiteReports` en 
 
 Une notification apparaît en fin de génération pour ouvrir le rapport ou son dossier de sortie.
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="structure-du-projet"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 📂 Structure du projet
 
@@ -151,9 +139,7 @@ Suite_Reports_Dev/
 
 > ⚠️ **Règle absolue** : `Citadel_Report_Tool/` et `Script Cryptobox/` sont des moteurs externes historiques appelés en `subprocess`. Les modifier casserait la compatibilité avec les rapports existants et les installations client.
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="developpement"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 🛠️ Développement
 
@@ -216,9 +202,7 @@ Frontend (HTML/JS) ←→ pont pywebview (js_api) ←→ Backend Python (classe 
 
 </details>
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
-
-`<a id="depannage"></a>`
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ## 🩹 Dépannage
 
@@ -226,7 +210,7 @@ Frontend (HTML/JS) ←→ pont pywebview (js_api) ←→ Backend Python (classe 
 - Erreur au démarrage ou à la génération → consultez `launcher.log` (ou le bouton **Log** dans l'app).
 - Dépendances manquantes ou environnement douteux → relancez `INSTALLER.bat`.
 
-<p align="right">(<a href="#top">retour en haut</a>)</p>
+<p align="right">(<a href="#">retour en haut</a>)</p>
 
 ---
 
